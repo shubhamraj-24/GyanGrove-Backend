@@ -2,19 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-// const cors=require('cors');
-// corsConfig={
-//     origin:"*",
-//     credential:true,
-//     methods:["GET","POST","PUT","DELETE"]
-// };
-
-
 require('dotenv').config();
 
 const app = express();
-// app.options("",cors(corsConfig));
-// app.use(cors(corsConfig));
 app.use(bodyParser.json());
 
 mongoose.connect(process.env.MONGODB_URL, { 
@@ -33,6 +23,17 @@ const eventSchema = new mongoose.Schema({
 });
 
 const Event = mongoose.model('Event', eventSchema);
+
+
+// API Root Directory Check
+app.post('/', async (req, res) => {
+    try {
+        res.status(201).json({ message: 'Welcome to Root Directory' });
+    } catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 
 // Data Creation API Endpoint
 app.post('/events/add', async (req, res) => {
