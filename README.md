@@ -28,6 +28,110 @@ This is a RESTful API built with Express.js and MongoDB for managing events. It 
 4. Run the application using `npm start`.
 
 ## API Endpoints
-- `GET /`: Returns a welcome message indicating that the server is running.
-- `POST /events/add`: Creates a new event with the provided details. Requires the following parameters in the request body: event_name, city_name, date, time, latitude, longitude.
-- `GET /events/find`: Finds events based on latitude, longitude, and date. Requires the following query parameters: latitude, longitude, date. Optionally, you can specify the page parameter for pagination.
+
+## API Endpoints
+
+### 1. Root Directory
+
+- **GET /**
+  - **Description**: Returns a welcome message indicating that the server is running.
+  - **Request**:
+    - **Method**: GET
+    - **Endpoint**: /
+  - **Response**:
+    - **Status Code**: 201 (Created)
+    - **Body**:
+      ```json
+      {
+        "message": "Welcome to Root Directory"
+      }
+      ```
+
+### 2. Data Creation API Endpoint
+
+- **POST /events/add**
+  - **Description**: Creates a new event with the provided details.
+  - **Request**:
+    - **Method**: POST
+    - **Endpoint**: /events/add
+    - **Body**:
+      ```json
+      {
+        "event_name": "Event Name",
+        "city_name": "City Name",
+        "date": "YYYY-MM-DD",
+        "time": "HH:MM",
+        "latitude": 0.0,
+        "longitude": 0.0
+      }
+      ```
+  - **Response**:
+    - **Success**:
+      - **Status Code**: 201 (Created)
+      - **Body**:
+        ```json
+        {
+          "message": "Event added successfully",
+          "event": {
+            "_id": "event_id",
+            "event_name": "Event Name",
+            "city_name": "City Name",
+            "date": "YYYY-MM-DD",
+            "time": "HH:MM",
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "__v": 0
+          }
+        }
+        ```
+    - **Error**:
+      - **Status Code**: 400 (Bad Request) or 500 (Internal Server Error)
+      - **Body**:
+        ```json
+        {
+          "error": "Please enter all the required details"
+        }
+        ```
+
+### 3. Data Finder API Endpoint
+
+- **GET /events/find**
+  - **Description**: Finds events based on latitude, longitude, and date.
+  - **Request**:
+    - **Method**: GET
+    - **Endpoint**: /events/find
+    - **Query Parameters**:
+      - latitude: Latitude of the location (required)
+      - longitude: Longitude of the location (required)
+      - date: Date to search events (required, format: YYYY-MM-DD)
+      - page: Page number for pagination (optional)
+  - **Response**:
+    - **Success**:
+      - **Status Code**: 200 (OK)
+      - **Body**:
+        ```json
+        {
+          "events": [
+            {
+              "event_name": "Event Name",
+              "city_name": "City Name",
+              "date": "YYYY-MM-DD",
+              "weather": "Weather Information",
+              "distance_km": Distance in Kilometers
+            },
+            ...
+          ],
+          "page": Current Page Number,
+          "pageSize": Page Size,
+          "totalEvents": Total Number of Events,
+          "totalPages": Total Number of Pages
+        }
+        ```
+    - **Error**:
+      - **Status Code**: 400 (Bad Request), 404 (Not Found), or 500 (Internal Server Error)
+      - **Body**:
+        ```json
+        {
+          "error": "Error message"
+        }
+        ```
