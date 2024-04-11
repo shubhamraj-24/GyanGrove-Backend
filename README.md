@@ -24,9 +24,8 @@ Hosted on vercel, sample event finder request : https://gyan-grove-backend.verce
 ### Installation
 
 1. Clone the repository from the GitHub link.<br>
-   ```json
+   ```bash
       git clone https://github.com/shubhamraj-24/GyanGrove-Backend.git
-   ```
 2. Run `npm install` to install the required dependencies.
 3. Create a `.env` file and add the necessary environment variables, such as the MongoDB connection URL and the port number.
 4. Run the application using `npm start`.
