@@ -3,12 +3,16 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 const cors=require('cors');
+corsConfig={
+    origin:"*",
+    credential:true,
+    methods:["GET","POST","PUT","DELETE"]
+};
 
 
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect(process.env.MONGODB_URL, { 
