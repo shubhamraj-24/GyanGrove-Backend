@@ -2,19 +2,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-const cors=require('cors');
-corsConfig={
-    origin:"*",
-    credential:true,
-    methods:["GET","POST","PUT","DELETE"]
-};
+// const cors=require('cors');
+// corsConfig={
+//     origin:"*",
+//     credential:true,
+//     methods:["GET","POST","PUT","DELETE"]
+// };
 
 
 require('dotenv').config();
 
 const app = express();
-app.options("",cors(corsConfig));
-app.use(cors(corsConfig));
+// app.options("",cors(corsConfig));
+// app.use(cors(corsConfig));
 app.use(bodyParser.json());
 
 mongoose.connect(process.env.MONGODB_URL, { 
