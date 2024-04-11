@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a RESTful API built with Express.js and MongoDB for managing events. It provides endpoints for creating events, searching for events based on location and date, and retrieving weather information and distance for each event.
+This is a RESTful API built with Node.js/Express.js and MongoDB for managing events. It provides endpoints for creating events, searching for events based on location and date, and retrieving weather information and distance for each event.
 
 Hosted on vercel, sample event finder request : https://gyan-grove-backend.vercel.app/events/find?latitude=40.7128&longitude=-74.0060&date=2024-03-14&page=1
 
@@ -26,9 +26,10 @@ Hosted on vercel, sample event finder request : https://gyan-grove-backend.verce
 1. Clone the repository from the GitHub link.<br>
    ```bash
       git clone https://github.com/shubhamraj-24/GyanGrove-Backend.git
-2. Run `npm install` to install the required dependencies.
-3. Create a `.env` file and add the necessary environment variables, such as the MongoDB connection URL and the port number.
-4. Run the application using `npm start`.
+2. Navigate to the project directory `GyanGrove-Backend`.
+3. Run `npm install` to install the required dependencies.
+4. Create a `.env` file and add the necessary environment variables, such as the MongoDB connection URL and the port number.
+5. Run the application using `npm start`.
 
 ## API Endpoints
 
@@ -43,7 +44,7 @@ Hosted on vercel, sample event finder request : https://gyan-grove-backend.verce
     - **Status Code**: 201 (Created)
     - **Body**:
       ```json
-
+      {
         "message": "Welcome to Root Directory"
       }
       ```
