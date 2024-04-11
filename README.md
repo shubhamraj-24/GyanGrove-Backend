@@ -29,8 +29,6 @@ This is a RESTful API built with Express.js and MongoDB for managing events. It 
 
 ## API Endpoints
 
-## API Endpoints
-
 ### 1. Root Directory
 
 - **GET /**
