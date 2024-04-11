@@ -21,7 +21,8 @@ This is a RESTful API built with Express.js and MongoDB for managing events. It 
 
 ### Installation
 
-1. Clone the repository from the GitHub link.\ngit clone https://github.com/shubhamraj-24/GyanGrove-Backend/tree/1a67e460dc72fb2166e4b2497fdc90e19e5b374b
+1. Clone the repository from the GitHub link.
+   git clone https://github.com/shubhamraj-24/GyanGrove-Backend/tree/1a67e460dc72fb2166e4b2497fdc90e19e5b374b
 2. Run `npm install` to install the required dependencies.
 3. Create a `.env` file and add the necessary environment variables, such as the MongoDB connection URL and the port number.
 4. Run the application using `npm start`.
