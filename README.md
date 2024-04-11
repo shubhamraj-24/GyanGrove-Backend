@@ -133,3 +133,6 @@ This is a RESTful API built with Express.js and MongoDB for managing events. It 
           "error": "Error message"
         }
         ```
+
+##Contributing<br>
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
