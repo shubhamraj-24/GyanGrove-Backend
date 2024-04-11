@@ -49,7 +49,7 @@ Hosted on `vercel`, sample event finder request : https://gyan-grove-backend.ver
       }
       ```
 
-### 2. Data Creation API Endpoint
+### 2. Event Creator API Endpoint
 
 - **POST /events/add**
   - **Description**: Creates a new event with the provided details.
@@ -95,7 +95,7 @@ Hosted on `vercel`, sample event finder request : https://gyan-grove-backend.ver
         }
         ```
 
-### 3. Data Finder API Endpoint
+### 3. Event Finder API Endpoint
 
 - **GET /events/find**
   - **Description**: Finds events based on latitude, longitude, and date.
