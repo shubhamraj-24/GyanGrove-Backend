@@ -27,11 +27,7 @@ const Event = mongoose.model('Event', eventSchema);
 
 // API Root Directory Check
 app.get('/', async (req, res) => {
-    try {
         res.status(201).json({ message: 'Welcome to Root Directory' });
-    } catch (error) {
-        res.status(500).json({ error: 'Internal server error' });
-    }
 });
 
 
