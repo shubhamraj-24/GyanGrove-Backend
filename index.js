@@ -13,6 +13,8 @@ corsConfig={
 require('dotenv').config();
 
 const app = express();
+app.options("",cors(corsConfig));
+app.use(cors(corsConfig));
 app.use(bodyParser.json());
 
 mongoose.connect(process.env.MONGODB_URL, { 
