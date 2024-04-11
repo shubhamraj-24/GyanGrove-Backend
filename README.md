@@ -4,7 +4,7 @@
 
 This is a RESTful API built with Node.js/Express.js and MongoDB for managing events. It provides endpoints for creating events, searching for events based on location and date, and retrieving weather information and distance for each event.
 
-Hosted on vercel, sample event finder request : https://gyan-grove-backend.vercel.app/events/find?latitude=40.7128&longitude=-74.0060&date=2024-03-14&page=1
+Hosted on `vercel`, sample event finder request : https://gyan-grove-backend.vercel.app/events/find?latitude=40.7128&longitude=-74.0060&date=2024-03-14&page=1
 
 ## Tech Stack
 
