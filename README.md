@@ -43,7 +43,7 @@ Hosted on vercel, sample event finder request : https://gyan-grove-backend.verce
     - **Status Code**: 201 (Created)
     - **Body**:
       ```json
-      {
+
         "message": "Welcome to Root Directory"
       }
       ```
@@ -110,7 +110,7 @@ Hosted on vercel, sample event finder request : https://gyan-grove-backend.verce
     - **Success**:
       - **Status Code**: 200 (OK)
       - **Body**:
-        ```json
+        ```bash
         {
           "events": [
             {
